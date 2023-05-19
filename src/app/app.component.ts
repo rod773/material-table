@@ -18,6 +18,7 @@ export class AppComponent {
   constructor(private service: MasterService) {
     this.service.GetCustomer().subscribe((res) => {
       this.customerList = res;
+
       this.dataSource = new MatTableDataSource<Customer>(this.customerList);
     });
   }

@@ -10,6 +10,8 @@ export class MasterService {
   constructor(private http: HttpClient) {}
 
   GetCustomer(): Observable<Customer[]> {
-    return this.http.get<Customer[]>('http://localhost:3000/customer');
+    let result = this.http.get<Customer[]>('http://localhost:3000/customer');
+    //console.log(result);
+    return result;
   }
 }
